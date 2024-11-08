@@ -1,1 +1,29 @@
+# Initialize the string with a
+# Now run till the length of the word is less than k
+# Now run a loop for the word
+# For each alphabet - take the next - chr(ord(letter)) + 1
+# Merge the alphabets	
+# Bring them all together in the word
+# Repeat the loop till the word length is less than k
+# Now get the kth alphabet from the word
+# Time complexity - O(n^2)
+# Space Complexity - O(n)
 
+class Solution:
+    def kthCharacter(self, k: int) -> str:
+        word = "a"
+        
+        # check if the length of the word is greater than or equal to k
+        while len(word) <= k:
+            
+            extension_word = ""
+            # get the next letters in the word immediately
+            for c in word:
+                new_word = chr(ord(c) + 1)
+                extension_word += new_word
+            
+            word = word + extension_word
+        
+        return(word[k-1])
+        
+        
