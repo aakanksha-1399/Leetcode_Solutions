@@ -1,4 +1,6 @@
 # check if the number is divisible by 2 if yes till the end, then it is power of two, else it is not
+# time complexity - O(logn)
+# space complexity - O(logn)
 
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
